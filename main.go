@@ -13,6 +13,7 @@ type Message struct {
 	Value string `json:"value"`
 }
 
+
 var db = make(map[string]string)
 
 func read_func(res http.ResponseWriter, req *http.Request) {
