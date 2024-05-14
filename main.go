@@ -91,7 +91,7 @@ func main() {
 
 	db, err = sql.Open("mysql", "root:@tcp(0.0.0.0:3306)/dbnew")
 	err = db.Ping()
-	//_, err = db.Exec("CREATE TABLE entries(date VARCHAR(20) PRIMARY KEY , day VARCHAR(20), task VARCHAR(100) );")
+	_, err = db.Exec("CREATE TABLE entries(date VARCHAR(20) PRIMARY KEY , day VARCHAR(20), task VARCHAR(100) );")
 
 	if err != nil {
 		log.Fatal(err)
